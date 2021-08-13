@@ -2,11 +2,11 @@ import List from "./List"
 
 // move buttons for empty and completed to another grid or even component?
 
-const ShoppingCart = (products) => {
+const ShoppingCart = (props) => {
 
     return (
         <div className="shopping">
-            <List products={products} />
+            <List data={props.data} />
         </div>
     )
 

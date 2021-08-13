@@ -1,12 +1,12 @@
-const ListItem = (products, addItemToMand) => {
+const ListItem = (props) => {
     return (
         <li>
             <div
-                onClick={addItemToMand}
+                onClick={() => props.addItemToMand()}
                 className="listItem"
-                key={products.id}>
+                key={props.id}>
                     
-                {products.title}
+                {props.title}
             </div>
         </li>
     )

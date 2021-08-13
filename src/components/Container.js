@@ -12,7 +12,9 @@ class Container extends Component {
                 { id: 2, title: "6 Pack Bier" },
                 { id: 3, title: "Pizza" }
             ],
-            mandItems: [],
+            mandItems: [
+                { id: 4, title: "Brood" }
+            ],
             value: "",
             product: ""
         }
@@ -82,11 +84,11 @@ class Container extends Component {
                 </div>
                 <div className="container">
                     <GroceryList 
-                        products={this.state.boodschappenItems}
+                        data={this.state.boodschappenItems}
                         onClick={this.addItemToMand} 
                         />
                     <ShoppingCart
-                        products={this.state.mandItems}
+                        data={this.state.mandItems}
                         />
                 </div>
             </div>

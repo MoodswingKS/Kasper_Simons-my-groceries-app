@@ -1,10 +1,10 @@
 import List from "./List"
 
-const GroceryList = (products, addItemToMand) => {
+const GroceryList = (props, addItemToMand) => {
 
 return (
     <div className="grocery">
-        <List products={products}
+        <List data={props.data}
             addItemToMand={addItemToMand}
          />
     </div>
