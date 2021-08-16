@@ -1,19 +1,12 @@
-const AddAndEmpty = (props) => {
+import TextField from "./TextField"
+
+const AddAndEmpty = ({addNewItem, emptyClicker}) => {
     return(
         <div className="topBar">
             <div className="addBtn">
-                <textarea 
-                    placeholder="Wat heb ik nodig?"
-                    name="product"
-                    value={props.text}
-                    onChange={props.handleChange}
-                    onKeyDown={props.enterNewItem}
-                ></textarea>
-                <button onClick={props.addNewItem}>
-                    +
-                </button>
+                <TextField onSubmit={addNewItem} />
             </div>
-            <button onClick={props.emptyClicker} className="emptyBtn">
+            <button onClick={emptyClicker} className="emptyBtn">
                 Mandje leegmaken
             </button>
         </div>

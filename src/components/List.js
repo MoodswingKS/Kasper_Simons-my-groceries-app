@@ -1,17 +1,13 @@
-import React from 'react'
 import ListItem from './ListItem'
 
-const List = (props) => {
-     
-    const listArray = props.data.map(item => { 
-        return <ListItem key={item.id} title={item.title} /> })
-
+const List = ({items, moveItems}) => { 
+    const listArray = items.map(item =>  
+        <ListItem key={item.id} item={item} moveItem={moveItems} /> )
     return (
         <ul>
             {listArray}
         </ul>
     )
-
 }
 
 export default List

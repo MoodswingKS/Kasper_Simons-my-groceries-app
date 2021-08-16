@@ -1,12 +1,12 @@
-const ListItem = (props) => {
+const ListItem = ({item, moveItem}) => {
     return (
-        <li>
+        <li className="listItem">
             <div
-                onClick={() => props.addItemToMand()}
-                className="listItem"
-                key={props.id}>
-                    
-                {props.title}
+                key={item.id}
+                item={item.item}
+                onClick={moveItem}
+                value={item.title}>
+                {item.title} {item.amount}
             </div>
         </li>
     )

@@ -1,15 +1,11 @@
 import List from "./List"
 
-const GroceryList = (props, addItemToMand) => {
-
+const GroceryList = ({listItems, moveItem}) => {
 return (
     <div className="grocery">
-        <List data={props.data}
-            addItemToMand={addItemToMand}
-         />
+        <List items={listItems} moveItems={moveItem} />
     </div>
     )
-
 }
 
 export default GroceryList
